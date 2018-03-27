@@ -25,6 +25,7 @@
 ![](/screenshoot/6.PNG)
 ![](/screenshoot/7.PNG)
 
+****GIF演示****
 ![](/screenshoot/demo.gif)
 
 ****观看视频演示****
