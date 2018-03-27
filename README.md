@@ -169,3 +169,7 @@ pod "FGVideoEditor"
 
 - [x] Xocde 9
 - [x] Swift 4.x
+
+-----------------
+万水千山总是情，给个star行不行
+欢迎pull request，欢迎isuue！
