@@ -1,4 +1,4 @@
-![](/img/title.png)
+![](/screenshoot/title.png)
 
 [![Version](https://img.shields.io/cocoapods/v/FGVideoEditor.svg?style=flat)](http://cocoadocs.org/docsets/FGVideoEditor)
 [![License](https://img.shields.io/cocoapods/l/FGVideoEditor.svg?style=flat)](http://cocoadocs.org/docsets/FGVideoEditor)
@@ -154,41 +154,12 @@ slider.dragDidEndHandler = {
 }
 ```
 
-### 安装
+### 安装 Install
 
 ```swift
 pod "FGVideoEditor"
 ```
 - 若手动安装，请添加依赖：`"SnapKit"`, `"FGHUD", "~>2.4"`, `"FGToolKit"`
-****HUD with type success,error,warning,toast will auto dismiss itself****
-
-### Install
-```
-pod 'FGHUD', '~> 2.4'
-```
-and import 
-```swift
-  import FGHUD
-```
-
-### Style
-
-```swift
-public enum HUDType {
-    //show a hud with template
-    case loading(String?)
-    //show success
-    case success(String?)
-    //show error
-    case error(String?)
-    //show warn
-    case warning(String?)
-    //show given content
-    case content(String?)
-    //auto dismiss after given time(FGHUDToastDuration)
-    case toast(String?)
-}
-```
 
 ### Required
 
