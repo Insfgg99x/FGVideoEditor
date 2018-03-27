@@ -124,7 +124,7 @@ private extension FGVideoPreViewController {
         })
 
         editBtn.setTitle("编辑", for: .normal)
-        editBtn.titleLabel?.font = font14
+        editBtn.titleLabel?.font = kfont14
         editBtn.setTitleColor(.white, for: .normal)
         editBtn.contentHorizontalAlignment = .left
         editBtn.addTarget(self, action: #selector(editAction(_:)), for: .touchUpInside)
@@ -136,7 +136,7 @@ private extension FGVideoPreViewController {
         }
         
         bottomDoneBtn.setTitle("完成", for: .normal)
-        bottomDoneBtn.titleLabel?.font = font14
+        bottomDoneBtn.titleLabel?.font = kfont14
         bottomDoneBtn.setTitleColor(.white, for: .normal)
         bottomDoneBtn.setTitleColor(hexcolor(0x4b8b5c), for: .disabled)
         bottomDoneBtn.backgroundColor = hexcolor(0x00b919)
@@ -158,7 +158,7 @@ private extension FGVideoPreViewController {
             make.size.equalTo(CGSize.init(width: 85, height: 85))
         }
         guard let url = videourl else {
-            showHUD(.error("获取不到资源"))
+            self.showHUD(.error("获取不到资源"))
             return
         }
         
@@ -203,7 +203,7 @@ private extension FGVideoPreViewController {
         guard duration >= minvideoduration else {
             let toshortLb = UILabel.init()
             toshortLb.text = "不能分享小于1秒的视频"
-            toshortLb.font = font14
+            toshortLb.font = kfont14
             toshortLb.textAlignment = .right
             toshortLb.textColor = .white
             topBar?.addSubview(toshortLb)
@@ -230,7 +230,7 @@ private extension FGVideoPreViewController {
             
             overLengtLb.text = "只能分享\(Int(maxduration))秒内的视频，需要进行编辑"
             overLengtLb.textColor = .white
-            overLengtLb.font = font14
+            overLengtLb.font = kfont14
             overLengtLb.adjustsFontSizeToFitWidth = true
             botBar?.addSubview(overLengtLb)
             overLengtLb.snp.makeConstraints({ (make) in
@@ -249,7 +249,7 @@ private extension FGVideoPreViewController {
     }
     @objc private func editAction(_ sender:UIButton) {
         guard let url = videourl else {
-            showHUD(.error("获取不到资源"))
+            self.showHUD(.error("获取不到资源"))
             return
         }
         croping = true
@@ -268,7 +268,7 @@ private extension FGVideoPreViewController {
             cancelBtn = UIButton.init()
             cancelBtn?.setTitle("取消", for: .normal)
             cancelBtn?.setTitleColor(.white, for: .normal)
-            cancelBtn?.titleLabel?.font = font14
+            cancelBtn?.titleLabel?.font = kfont14
             cancelBtn?.addTarget(self, action: #selector(cancelAction(_:)), for: .touchUpInside)
             botBar?.addSubview(cancelBtn!)
             cancelBtn?.snp.makeConstraints { (make) in
@@ -283,7 +283,7 @@ private extension FGVideoPreViewController {
             confirmBtn = UIButton.init()
             confirmBtn?.setTitle("完成", for: .normal)
             confirmBtn?.setTitleColor(hexcolor(0x00ae17), for: .normal)
-            confirmBtn?.titleLabel?.font = font14
+            confirmBtn?.titleLabel?.font = kfont14
             confirmBtn?.addTarget(self, action: #selector(confrimEditAction(_:)), for: .touchUpInside)
             botBar?.addSubview(confirmBtn!)
             confirmBtn?.snp.makeConstraints { (make) in
@@ -353,7 +353,7 @@ private extension FGVideoPreViewController {
     @objc private func bottomDoneAction(_ sender:UIButton) {
         sender.isEnabled = false
         guard videourl != nil else {
-            showHUD(.error("资源加载失败"))
+            self.showHUD(.error("资源加载失败"))
             return
         }
         var info:FGVideoInfo? = nil
@@ -450,13 +450,13 @@ private extension FGVideoPreViewController {
     }
     @objc private func confrimEditAction(_ sender:UIButton) {
         guard let url = videourl else {
-            showHUD(.error("获取不到资源"))
+            self.showHUD(.error("获取不到资源"))
             return
         }
         let range = slider.cropRange
         //cut video
         botBar?.isUserInteractionEnabled = false
-        showHUD(.loading("处理中"))
+        self.showHUD(.loading("处理中"))
         FGVideoEditor.shared.cropVideo(url: url, cropRange: range, completion: { (newUrl, newDuration, result) in
             guard result else {
                 self.showHUD(.error("剪切失败"))

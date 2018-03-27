@@ -43,7 +43,7 @@ extension ViewController {
         weak var wkself = self
         pickBtn = Maker.makeBtn(title: "选取视频",
                                 textColor: .white,
-                                font: font16,
+                                font: kfont16,
                                 bgcolor: .darkGray,
                                 handler: { (sender) in
             guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
@@ -72,7 +72,7 @@ extension ViewController :UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let url = info[UIImagePickerControllerMediaURL] as? URL else {
             picker.dismiss(animated: true, completion: nil)
-            showHUD(.error("获取不到资源"))
+            self.showHUD(.error("获取不到资源"))
             return
         }
         crop(video: url)
