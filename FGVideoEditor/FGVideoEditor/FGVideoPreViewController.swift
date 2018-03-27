@@ -124,7 +124,7 @@ private extension FGVideoPreViewController {
         })
 
         editBtn.setTitle("编辑", for: .normal)
-        editBtn.titleLabel?.font = kfont14
+        editBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         editBtn.setTitleColor(.white, for: .normal)
         editBtn.contentHorizontalAlignment = .left
         editBtn.addTarget(self, action: #selector(editAction(_:)), for: .touchUpInside)
@@ -136,7 +136,7 @@ private extension FGVideoPreViewController {
         }
         
         bottomDoneBtn.setTitle("完成", for: .normal)
-        bottomDoneBtn.titleLabel?.font = kfont14
+        bottomDoneBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         bottomDoneBtn.setTitleColor(.white, for: .normal)
         bottomDoneBtn.setTitleColor(hexcolor(0x4b8b5c), for: .disabled)
         bottomDoneBtn.backgroundColor = hexcolor(0x00b919)
@@ -203,7 +203,7 @@ private extension FGVideoPreViewController {
         guard duration >= minvideoduration else {
             let toshortLb = UILabel.init()
             toshortLb.text = "不能分享小于1秒的视频"
-            toshortLb.font = kfont14
+            toshortLb.font = UIFont.systemFont(ofSize: 14)
             toshortLb.textAlignment = .right
             toshortLb.textColor = .white
             topBar?.addSubview(toshortLb)
@@ -230,7 +230,7 @@ private extension FGVideoPreViewController {
             
             overLengtLb.text = "只能分享\(Int(maxduration))秒内的视频，需要进行编辑"
             overLengtLb.textColor = .white
-            overLengtLb.font = kfont14
+            overLengtLb.font = UIFont.systemFont(ofSize: 14)
             overLengtLb.adjustsFontSizeToFitWidth = true
             botBar?.addSubview(overLengtLb)
             overLengtLb.snp.makeConstraints({ (make) in
@@ -268,7 +268,7 @@ private extension FGVideoPreViewController {
             cancelBtn = UIButton.init()
             cancelBtn?.setTitle("取消", for: .normal)
             cancelBtn?.setTitleColor(.white, for: .normal)
-            cancelBtn?.titleLabel?.font = kfont14
+            cancelBtn?.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             cancelBtn?.addTarget(self, action: #selector(cancelAction(_:)), for: .touchUpInside)
             botBar?.addSubview(cancelBtn!)
             cancelBtn?.snp.makeConstraints { (make) in
@@ -283,7 +283,7 @@ private extension FGVideoPreViewController {
             confirmBtn = UIButton.init()
             confirmBtn?.setTitle("完成", for: .normal)
             confirmBtn?.setTitleColor(hexcolor(0x00ae17), for: .normal)
-            confirmBtn?.titleLabel?.font = kfont14
+            confirmBtn?.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             confirmBtn?.addTarget(self, action: #selector(confrimEditAction(_:)), for: .touchUpInside)
             botBar?.addSubview(confirmBtn!)
             confirmBtn?.snp.makeConstraints { (make) in

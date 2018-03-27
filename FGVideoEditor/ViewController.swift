@@ -43,11 +43,10 @@ extension ViewController {
         weak var wkself = self
         pickBtn = Maker.makeBtn(title: "选取视频",
                                 textColor: .white,
-                                font: kfont16,
+                                font: UIFont.systemFont(ofSize: 16),
                                 bgcolor: .darkGray,
                                 handler: { (sender) in
             guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
-                wkself?.showHUD(.error("无法访问相册"))
                 return
             }
             let picker = UIImagePickerController.init()
@@ -72,7 +71,6 @@ extension ViewController :UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let url = info[UIImagePickerControllerMediaURL] as? URL else {
             picker.dismiss(animated: true, completion: nil)
-            self.showHUD(.error("获取不到资源"))
             return
         }
         crop(video: url)
@@ -84,9 +82,7 @@ extension ViewController {
     private func crop(video url:URL) {
         weak var wkself = self
         let preview = FGVideoPreViewController.init(max: 10, vedio: url) { (edit, info) in
-            wkself?.cropedUrl   = info.url
-            //let videoWidth      = info.width
-            //let videoHeight     = info.height
+            wkself?.cropedUrl = info.url
             wkself?.navigationController?.popViewController(animated: true)
             wkself?.playCropedVideo()
         }
