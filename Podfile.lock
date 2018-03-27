@@ -1,0 +1,20 @@
+PODS:
+  - FGHUD (2.4):
+    - SnapKit
+  - FGToolKit (2.0):
+    - SnapKit
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - FGHUD (~> 2.4)
+  - FGToolKit
+  - SnapKit
+
+SPEC CHECKSUMS:
+  FGHUD: 91228c40edb2d42e7e54b527922280f2c3bab647
+  FGToolKit: e89d2c4ea9fc70ec47c0726b311c5900e4edab1a
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: b0b7eeab677ca720a073f004437017da4afb3cc2
+
+COCOAPODS: 1.4.0

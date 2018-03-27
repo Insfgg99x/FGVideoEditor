@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F655539D389FD00ABEF078A /* Pods_FGVideoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71A618F75C4B0BCFAFC466D /* Pods_FGVideoEditor.framework */; };
+		C375C390206A1A51006E8D4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C38F206A1A51006E8D4B /* AppDelegate.swift */; };
+		C375C392206A1A51006E8D4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C391206A1A51006E8D4B /* ViewController.swift */; };
+		C375C395206A1A51006E8D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C375C393206A1A51006E8D4B /* Main.storyboard */; };
+		C375C397206A1A51006E8D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C375C396206A1A51006E8D4B /* Assets.xcassets */; };
+		C375C39A206A1A51006E8D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C375C398206A1A51006E8D4B /* LaunchScreen.storyboard */; };
+		C375C3AA206A1A66006E8D4B /* FGVideoCropOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C3A2206A1A66006E8D4B /* FGVideoCropOverlay.swift */; };
+		C375C3AB206A1A66006E8D4B /* FGVideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C3A3206A1A66006E8D4B /* FGVideoEditor.swift */; };
+		C375C3AC206A1A66006E8D4B /* FGVideoEditSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C3A4206A1A66006E8D4B /* FGVideoEditSliderView.swift */; };
+		C375C3AD206A1A66006E8D4B /* FGVideoPreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C3A5206A1A66006E8D4B /* FGVideoPreViewController.swift */; };
+		C375C3AE206A1A66006E8D4B /* img_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375C3A7206A1A66006E8D4B /* img_play@2x.png */; };
+		C375C3AF206A1A66006E8D4B /* img_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375C3A8206A1A66006E8D4B /* img_play@3x.png */; };
+		C375C3B0206A1A66006E8D4B /* whiteback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375C3A9206A1A66006E8D4B /* whiteback@2x.png */; };
+		C375C3B2206A1A83006E8D4B /* FGVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C3B1206A1A83006E8D4B /* FGVideoInfo.swift */; };
+		C375C3B4206A1B4D006E8D4B /* FGVideoEditTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C3B3206A1B4D006E8D4B /* FGVideoEditTool.swift */; };
+		C375C468206A42BF006E8D4B /* FGVideoEditorConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C375C467206A42BF006E8D4B /* FGVideoEditorConst.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3060417E3ACF39AE134EDCD3 /* Pods-FGVideoEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FGVideoEditor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FGVideoEditor/Pods-FGVideoEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		A71A618F75C4B0BCFAFC466D /* Pods_FGVideoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FGVideoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C375C38C206A1A51006E8D4B /* FGVideoEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FGVideoEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C375C38F206A1A51006E8D4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C375C391206A1A51006E8D4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C375C394206A1A51006E8D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C375C396206A1A51006E8D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C375C399206A1A51006E8D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C375C39B206A1A51006E8D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C375C3A2206A1A66006E8D4B /* FGVideoCropOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGVideoCropOverlay.swift; sourceTree = "<group>"; };
+		C375C3A3206A1A66006E8D4B /* FGVideoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGVideoEditor.swift; sourceTree = "<group>"; };
+		C375C3A4206A1A66006E8D4B /* FGVideoEditSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGVideoEditSliderView.swift; sourceTree = "<group>"; };
+		C375C3A5206A1A66006E8D4B /* FGVideoPreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FGVideoPreViewController.swift; sourceTree = "<group>"; };
+		C375C3A7206A1A66006E8D4B /* img_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_play@2x.png"; sourceTree = "<group>"; };
+		C375C3A8206A1A66006E8D4B /* img_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_play@3x.png"; sourceTree = "<group>"; };
+		C375C3A9206A1A66006E8D4B /* whiteback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteback@2x.png"; sourceTree = "<group>"; };
+		C375C3B1206A1A83006E8D4B /* FGVideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGVideoInfo.swift; sourceTree = "<group>"; };
+		C375C3B3206A1B4D006E8D4B /* FGVideoEditTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGVideoEditTool.swift; sourceTree = "<group>"; };
+		C375C467206A42BF006E8D4B /* FGVideoEditorConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FGVideoEditorConst.swift; sourceTree = "<group>"; };
+		F1078D72FEFE52EBB814734A /* Pods-FGVideoEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FGVideoEditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FGVideoEditor/Pods-FGVideoEditor.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C375C389206A1A51006E8D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F655539D389FD00ABEF078A /* Pods_FGVideoEditor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55CDB897FD1364587C60D046 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A71A618F75C4B0BCFAFC466D /* Pods_FGVideoEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D4BEC6E21FA3B303F81849C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3060417E3ACF39AE134EDCD3 /* Pods-FGVideoEditor.debug.xcconfig */,
+				F1078D72FEFE52EBB814734A /* Pods-FGVideoEditor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C375C383206A1A51006E8D4B = {
+			isa = PBXGroup;
+			children = (
+				C375C38E206A1A51006E8D4B /* FGVideoEditor */,
+				C375C38D206A1A51006E8D4B /* Products */,
+				8D4BEC6E21FA3B303F81849C /* Pods */,
+				55CDB897FD1364587C60D046 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C375C38D206A1A51006E8D4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C375C38C206A1A51006E8D4B /* FGVideoEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C375C38E206A1A51006E8D4B /* FGVideoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				C375C3A1206A1A66006E8D4B /* FGVideoEditor */,
+				C375C38F206A1A51006E8D4B /* AppDelegate.swift */,
+				C375C391206A1A51006E8D4B /* ViewController.swift */,
+				C375C393206A1A51006E8D4B /* Main.storyboard */,
+				C375C396206A1A51006E8D4B /* Assets.xcassets */,
+				C375C398206A1A51006E8D4B /* LaunchScreen.storyboard */,
+				C375C39B206A1A51006E8D4B /* Info.plist */,
+			);
+			path = FGVideoEditor;
+			sourceTree = "<group>";
+		};
+		C375C3A1206A1A66006E8D4B /* FGVideoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				C375C3A5206A1A66006E8D4B /* FGVideoPreViewController.swift */,
+				C375C3A4206A1A66006E8D4B /* FGVideoEditSliderView.swift */,
+				C375C3A2206A1A66006E8D4B /* FGVideoCropOverlay.swift */,
+				C375C3A3206A1A66006E8D4B /* FGVideoEditor.swift */,
+				C375C3B1206A1A83006E8D4B /* FGVideoInfo.swift */,
+				C375C3B3206A1B4D006E8D4B /* FGVideoEditTool.swift */,
+				C375C467206A42BF006E8D4B /* FGVideoEditorConst.swift */,
+				C375C3A6206A1A66006E8D4B /* recources */,
+			);
+			path = FGVideoEditor;
+			sourceTree = "<group>";
+		};
+		C375C3A6206A1A66006E8D4B /* recources */ = {
+			isa = PBXGroup;
+			children = (
+				C375C3A7206A1A66006E8D4B /* img_play@2x.png */,
+				C375C3A8206A1A66006E8D4B /* img_play@3x.png */,
+				C375C3A9206A1A66006E8D4B /* whiteback@2x.png */,
+			);
+			path = recources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C375C38B206A1A51006E8D4B /* FGVideoEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C375C39E206A1A51006E8D4B /* Build configuration list for PBXNativeTarget "FGVideoEditor" */;
+			buildPhases = (
+				33A33023D79F4D1011CE1F41 /* [CP] Check Pods Manifest.lock */,
+				C375C388206A1A51006E8D4B /* Sources */,
+				C375C389206A1A51006E8D4B /* Frameworks */,
+				C375C38A206A1A51006E8D4B /* Resources */,
+				53989D05EBB1F4D389AFD2DA /* [CP] Embed Pods Frameworks */,
+				F8C63AC3842E3D2A29CADFD9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FGVideoEditor;
+			productName = FGVideoEditor;
+			productReference = C375C38C206A1A51006E8D4B /* FGVideoEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C375C384206A1A51006E8D4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = xgf;
+				TargetAttributes = {
+					C375C38B206A1A51006E8D4B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C375C387206A1A51006E8D4B /* Build configuration list for PBXProject "FGVideoEditor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C375C383206A1A51006E8D4B;
+			productRefGroup = C375C38D206A1A51006E8D4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C375C38B206A1A51006E8D4B /* FGVideoEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C375C38A206A1A51006E8D4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C375C39A206A1A51006E8D4B /* LaunchScreen.storyboard in Resources */,
+				C375C3B0206A1A66006E8D4B /* whiteback@2x.png in Resources */,
+				C375C3AF206A1A66006E8D4B /* img_play@3x.png in Resources */,
+				C375C397206A1A51006E8D4B /* Assets.xcassets in Resources */,
+				C375C3AE206A1A66006E8D4B /* img_play@2x.png in Resources */,
+				C375C395206A1A51006E8D4B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33A33023D79F4D1011CE1F41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FGVideoEditor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53989D05EBB1F4D389AFD2DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FGVideoEditor/Pods-FGVideoEditor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FGHUD/FGHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/FGToolKit/FGToolKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FGHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FGToolKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FGVideoEditor/Pods-FGVideoEditor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C63AC3842E3D2A29CADFD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FGVideoEditor/Pods-FGVideoEditor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C375C388206A1A51006E8D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C375C3B4206A1B4D006E8D4B /* FGVideoEditTool.swift in Sources */,
+				C375C3AC206A1A66006E8D4B /* FGVideoEditSliderView.swift in Sources */,
+				C375C3AA206A1A66006E8D4B /* FGVideoCropOverlay.swift in Sources */,
+				C375C3AB206A1A66006E8D4B /* FGVideoEditor.swift in Sources */,
+				C375C468206A42BF006E8D4B /* FGVideoEditorConst.swift in Sources */,
+				C375C3B2206A1A83006E8D4B /* FGVideoInfo.swift in Sources */,
+				C375C392206A1A51006E8D4B /* ViewController.swift in Sources */,
+				C375C390206A1A51006E8D4B /* AppDelegate.swift in Sources */,
+				C375C3AD206A1A66006E8D4B /* FGVideoPreViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C375C393206A1A51006E8D4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C375C394206A1A51006E8D4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C375C398206A1A51006E8D4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C375C399206A1A51006E8D4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C375C39C206A1A51006E8D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C375C39D206A1A51006E8D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C375C39F206A1A51006E8D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3060417E3ACF39AE134EDCD3 /* Pods-FGVideoEditor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P9D2224EQ;
+				INFOPLIST_FILE = FGVideoEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xgf.FGVideoEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C375C3A0206A1A51006E8D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1078D72FEFE52EBB814734A /* Pods-FGVideoEditor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P9D2224EQ;
+				INFOPLIST_FILE = FGVideoEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xgf.FGVideoEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C375C387206A1A51006E8D4B /* Build configuration list for PBXProject "FGVideoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C375C39C206A1A51006E8D4B /* Debug */,
+				C375C39D206A1A51006E8D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C375C39E206A1A51006E8D4B /* Build configuration list for PBXNativeTarget "FGVideoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C375C39F206A1A51006E8D4B /* Debug */,
+				C375C3A0206A1A51006E8D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C375C384206A1A51006E8D4B /* Project object */;
+}
