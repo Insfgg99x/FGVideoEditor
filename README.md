@@ -1,15 +1,15 @@
 ![](/screenshoot/title.png)
 
+🎉🚀📅🌎👍🎉
+
+史上首款跟微信朋友圈视频裁剪相似的视频裁剪开源工具
+
 [![Version](https://img.shields.io/cocoapods/v/FGVideoEditor.svg?style=flat)](http://cocoadocs.org/docsets/FGVideoEditor)
 [![License](https://img.shields.io/cocoapods/l/FGVideoEditor.svg?style=flat)](http://cocoadocs.org/docsets/FGVideoEditor)
 [![Platform](https://img.shields.io/cocoapods/p/FGVideoEditor.svg?style=flat)](http://cocoadocs.org/docsets/FGVideoEditor)
 ![Language](https://img.shields.io/badge/Language-%20Swift%204.0%20-blue.svg)
 
 # FGVideoEditor
-
-🎉🚀📅🌎👍🎉
-
-史上首款跟微信朋友圈视频裁剪相似的视频裁剪开源工具
 
 - [x]视频时长裁剪处理
 - [x]视频裁剪UI
@@ -24,6 +24,7 @@
 ![](/screenshoot/5.PNG)
 ![](/screenshoot/6.PNG)
 ![](/screenshoot/7.PNG)
+![](/screenshoot/8.PNG)
 
 ****GIF演示****
 
