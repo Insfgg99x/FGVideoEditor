@@ -10,13 +10,13 @@ import UIKit
 
 public class FGVideoInfo: NSObject {
     /**第一帧的图片*/
-    var image:UIImage?
+    open var image:UIImage?
     /**资源路径*/
-    var url:URL = URL.init(fileURLWithPath: "file:///")
+    open var url:URL = URL.init(fileURLWithPath: "file:///")
     /**视频宽度*/
-    var width:CGFloat = 200
+    open var width:CGFloat = 200
     /**视频高度*/
-    var height:CGFloat = 100
+    open var height:CGFloat = 100
     /**视频的时长*/
-    var duration:CGFloat = 0.0
+    open var duration:CGFloat = 0.0
 }

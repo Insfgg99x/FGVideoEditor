@@ -10,22 +10,22 @@ import UIKit
 import AVFoundation
 
 public class FGVideoEditSliderView: UIView {
-    var imgw:CGFloat = 50
-    var url:URL!
-    var cropStart:CGFloat {
+    open var imgw:CGFloat = 50
+    open var url:URL!
+    open var cropStart:CGFloat {
         get {
             let xpos = contentView.contentOffset.x + overlay.frame.origin.x
             let start = (xpos / contentView.contentSize.width) * duration
             return start
         }
     }
-    var cropDuration:CGFloat {
+    open var cropDuration:CGFloat {
         get {
             let cropAreaDuration = (overlay.frame.size.width / contentView.contentSize.width) * duration
             return cropAreaDuration
         }
     }
-    var cropRange:CMTimeRange {
+    open var cropRange:CMTimeRange {
         get {
             let xpos = contentView.contentOffset.x + overlay.frame.origin.x
             let start = (xpos / contentView.contentSize.width) * duration
@@ -36,18 +36,24 @@ public class FGVideoEditSliderView: UIView {
             return range
         }
     }
-    var cropWidth:CGFloat {
+    open var cropWidth:CGFloat {
         get {
             return overlay.bounds.size.width
         }
     }
-    var indicatorXpos:CGFloat = 0 {
+    open var indicatorXpos:CGFloat = 0 {
         didSet {
             if overlay != nil {
                 overlay.indicatorXpos = indicatorXpos
             }
         }
     }
+    open var slidingBeginHandler:(() -> ())?
+    open var slidingHandler:((FGSlideDirection) -> ())?
+    open var slidingEndHandler:(() -> ())?
+    open var contentDidScrollHandler:(() -> ())?
+    open var dragWillBeginHandler:(() -> ())?
+    open var dragDidEndHandler:(() -> ())?
     private var overlay:FGVideoCropOverlay!
     private var imageGenerator:AVAssetImageGenerator!
     private var duration:CGFloat = 0
@@ -56,12 +62,6 @@ public class FGVideoEditSliderView: UIView {
     private let framesInScreen = 10
     private let imgh:CGFloat = 50
     private var contentView = UIScrollView.init()
-    var slidingBeginHandler:(() -> ())?
-    var slidingHandler:((FGSlideDirection) -> ())?
-    var slidingEndHandler:(() -> ())?
-    var contentDidScrollHandler:(() -> ())?
-    var dragWillBeginHandler:(() -> ())?
-    var dragDidEndHandler:(() -> ())?
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -35,6 +35,29 @@
 
 ### 使用 Usage
 
+微信样式视频裁剪只需要简单的使用(Simply use follow interface to crop a video in WeChat-style-lkie)
+```siwft
+public convenience init(max duration:CGFloat, vedio url:URL, finishHandler:((FGVideoPreViewController, FGVideoInfo) -> ())?)
+```
+或者只裁剪不要UI(or just using crop function)
+```swift 
+public func cropVideo(url: URL, cropRange:CMTimeRange, completion:((_ newUrl: URL, _ newDuration:CGFloat,_ result:Bool) -> ())?)
+```
+或者只用微信样式的视频裁剪UI(or just WeChat-style video croping UI)
+```
+public convenience init(frame: CGRect, url:URL, imgw:CGFloat, maxduration:CGFloat)
+var cropStart:CGFloat {get} //获取当前裁剪区域的左边界对应的时间（相对于视频开始播放的位置为0s）
+var cropDuration:CGFloat {get} //获取当前裁剪区域对应的时长
+var cropRange:CMTimeRange {get} //当前裁剪区域的CMTime范围
+var cropWidth:CGFloat {get} //当前裁剪区域的宽度
+var slidingBeginHandler:(() -> ())? {get, set} //开始滑动视频裁剪区域的左／右边界的回调
+var slidingHandler:((FGSlideDirection) -> ())? {get, set} //滑动视频裁剪区域的左／右边界的回调
+var slidingEndHandler:(() -> ())? {get, set} //结束左／右边界的滑动
+]var contentDidScrollHandler:(() -> ())? {get, set} //滑动视频帧图片横向列表的回调
+var dragWillBeginHandler:(() -> ())? {get, set} //将要滑动视频帧图片横向列表的回调
+var dragDidEndHandler:(() -> ())? {get, set} //结束滑动视频帧图片横向列表的回调
+```
+
 需要先选取一个视频
 
 ```swift
@@ -56,7 +79,9 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 }
 ```
 
-# 利用预览视图裁剪，内置最小最大时长判断
+# 示例(Example)
+ 
+## 利用预览视图裁剪，内置最小最大时长判断(croping and ui)
 
 ```swift
 private func crop(video url:URL) {
@@ -85,7 +110,7 @@ private func playCropedVideo() {
 }
 ```
 
-# 仅使用视频裁剪能力
+## 仅使用视频裁剪能力(croping only)
 
 ```swift
 FGVideoEditor.shared.cropVideo(url: url, cropRange: range, completion: { (newUrl, newDuration, result) in
@@ -97,31 +122,11 @@ FGVideoEditor.shared.cropVideo(url: url, cropRange: range, completion: { (newUrl
 })
 ```
 
-# 仅使用视频裁剪UI
+## 仅使用视频裁剪UI(ui only)
 ```swift
 let editFrame = CGRect.init(x: 50, y: screenheight - 100, width: screenwidth - 100, height: 50)
 slider = FGVideoEditSliderView.init(frame: editFrame, url: url, imgw: imgw, maxduration: 10)
 view.addSubview(slider)
-```
-
-##### 特征
-
-```swift
-var cropStart:CGFloat {get} //获取当前裁剪区域的左边界对应的时间（相对于视频开始播放的位置为0s）
-var cropDuration:CGFloat {get} //获取当前裁剪区域对应的时长
-var cropRange:CMTimeRange {get} //当前裁剪区域的CMTime范围
-var cropWidth:CGFloat {get} //当前裁剪区域的宽度
-var slidingBeginHandler:(() -> ())? {get, set} //开始滑动视频裁剪区域的左／右边界的回调
-var slidingHandler:((FGSlideDirection) -> ())? {get, set} //滑动视频裁剪区域的左／右边界的回调
-var slidingEndHandler:(() -> ())? {get, set} //结束左／右边界的滑动
-]var contentDidScrollHandler:(() -> ())? {get, set} //滑动视频帧图片横向列表的回调
-var dragWillBeginHandler:(() -> ())? {get, set} //将要滑动视频帧图片横向列表的回调
-var dragDidEndHandler:(() -> ())? {get, set} //结束滑动视频帧图片横向列表的回调
-```
-
-##### 示例
-
-```swift
 weak var wkself = self
 slider.slidingBeginHandler = {
     wkself?.player?.pause()
@@ -160,18 +165,18 @@ slider.dragDidEndHandler = {
 }
 ```
 
-### 安装 Install
+# 安装 Installation
 
 ```swift
-pod "FGVideoEditor"
+pod "FGVideoEditor", "~>1.1"
 ```
 ****若手动安装，请添加依赖：`"SnapKit"`, `"FGHUD", "~>2.4"`, `"FGToolKit"`****
 
-### 环境 Required
+# 环境 Required
 
 - [x] Xocde 9
 - [x] Swift 4.x
 
------------------
-万水千山总是情，给个star行不行
-欢迎pull request，欢迎isuue！
+---------------------
+***万水千山总是情，给个star行不行
+欢迎pull request，欢迎isuue！***
