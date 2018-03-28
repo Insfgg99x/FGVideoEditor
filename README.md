@@ -44,7 +44,7 @@ public convenience init(max duration:CGFloat, vedio url:URL, finishHandler:((FGV
 public func cropVideo(url: URL, cropRange:CMTimeRange, completion:((_ newUrl: URL, _ newDuration:CGFloat,_ result:Bool) -> ())?)
 ```
 或者只用微信样式的视频裁剪UI(or just WeChat-style video croping UI)
-```
+```swift
 public convenience init(frame: CGRect, url:URL, imgw:CGFloat, maxduration:CGFloat)
 var cropStart:CGFloat {get} //获取当前裁剪区域的左边界对应的时间（相对于视频开始播放的位置为0s）
 var cropDuration:CGFloat {get} //获取当前裁剪区域对应的时长
