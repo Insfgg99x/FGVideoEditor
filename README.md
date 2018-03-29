@@ -58,6 +58,10 @@ var dragWillBeginHandler:(() -> ())? {get, set} //将要滑动视频帧图片横
 var dragDidEndHandler:(() -> ())? {get, set} //结束滑动视频帧图片横向列表的回调
 ```
 
+你可以使用`shouldSaveCropedVideoToPhotoLibrary`来控制裁剪视频后是否自动保存至相册，默认是true (save croped video to photo library. default is true, set false to disable auto save to photo library)
+
+## 示例(Example)
+
 需要先选取一个视频
 
 ```swift
@@ -78,8 +82,6 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     picker.dismiss(animated: true, completion: nil)
 }
 ```
-
-# 示例(Example)
  
 ## 利用预览视图裁剪，内置最小最大时长判断(croping and ui)
 
@@ -168,7 +170,7 @@ slider.dragDidEndHandler = {
 # 安装 Installation
 
 ```swift
-pod "FGVideoEditor", "~>1.1"
+pod "FGVideoEditor", "~>1.2"
 import FGVideoEditor
 ```
 ****若手动安装，请添加依赖：`"SnapKit"`, `"FGHUD", "~>2.4"`, `"pod "FGToolKit", "~>2.0"`****

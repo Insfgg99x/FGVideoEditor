@@ -17,6 +17,7 @@ import CoreMedia
 
 public class FGVideoPreViewController: UIViewController {
     var shouldDeleteOriginalVideo = false
+    var shouldSaveCropedVideoToPhotoLibrary = true
     private var maxduration:CGFloat = 10
     private var comletionHandler:((FGVideoPreViewController, FGVideoInfo?, Bool) -> ())?
     private var videourl:URL?
@@ -370,7 +371,9 @@ private extension FGVideoPreViewController {
                     
                 }
             }
-            FGVideoEditor.shared.save(vedio: cropedUrl, hud: false)
+            if shouldSaveCropedVideoToPhotoLibrary {
+                FGVideoEditor.shared.save(vedio: cropedUrl, hud: false)
+            }
         } else {
             info = FGVideoEditTool.videoInfo(videourl!, at: 0)
         }
