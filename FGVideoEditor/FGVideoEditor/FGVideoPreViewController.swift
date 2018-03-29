@@ -13,11 +13,12 @@ import AVFoundation
 import SnapKit
 import FGToolKit
 import FGHUD
+import CoreMedia
 
 public class FGVideoPreViewController: UIViewController {
     var shouldDeleteOriginalVideo = false
     private var maxduration:CGFloat = 10
-    private var comletionHandler:((FGVideoPreViewController, FGVideoInfo) -> ())?
+    private var comletionHandler:((FGVideoPreViewController, FGVideoInfo?, Bool) -> ())?
     private var videourl:URL?
     private let framesInScreen = 10
     private var croph:CGFloat = 50
@@ -67,7 +68,7 @@ public class FGVideoPreViewController: UIViewController {
     }
 }
 public extension FGVideoPreViewController {
-    public convenience init(max duration:CGFloat, vedio url:URL, finishHandler:((FGVideoPreViewController, FGVideoInfo) -> ())?) {
+    public convenience init(maxDuration duration:CGFloat, vedio url:URL, finishHandler:((FGVideoPreViewController, FGVideoInfo?, Bool) -> ())?) {
         self.init()
         maxduration = duration
         videourl = url
@@ -245,6 +246,9 @@ private extension FGVideoPreViewController {
     @objc private func backAction() {
         player?.pause()
         player = nil
+        if comletionHandler != nil {
+            comletionHandler?(self, nil, false)
+        }
         navigationController?.popViewController(animated: true)
     }
     @objc private func editAction(_ sender:UIButton) {
@@ -371,7 +375,7 @@ private extension FGVideoPreViewController {
             info = FGVideoEditTool.videoInfo(videourl!, at: 0)
         }
         if comletionHandler != nil {
-            comletionHandler?(self, info!)
+            comletionHandler?(self, info!, true)
         }
     }
     private func cancelEditing(_ success:Bool) {

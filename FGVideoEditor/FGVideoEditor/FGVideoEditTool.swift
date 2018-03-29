@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreMedia
 
 class FGVideoEditTool: NSObject {
     //MARK - get veido pixel image

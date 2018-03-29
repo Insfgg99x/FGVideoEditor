@@ -81,9 +81,13 @@ extension ViewController :UIImagePickerControllerDelegate, UINavigationControlle
 extension ViewController {
     private func crop(video url:URL) {
         weak var wkself = self
-        let preview = FGVideoPreViewController.init(max: 10, vedio: url) { (edit, info) in
-            wkself?.cropedUrl = info.url
+        let preview = FGVideoPreViewController.init(maxDuration: 10, vedio: url) { (edit, info, result) in
             wkself?.navigationController?.popViewController(animated: true)
+            guard result, let cropedInfo = info else {
+                wkself?.showHUD(.error("裁剪失败"))
+                return
+            }
+            wkself?.cropedUrl = cropedInfo.url
             wkself?.playCropedVideo()
         }
         navigationController?.pushViewController(preview, animated: true)
@@ -100,7 +104,7 @@ extension ViewController {
         player = AVPlayer.init(url: url)
         previewLayer = AVPlayerLayer.init(player: player)
         previewLayer?.backgroundColor = UIColor.clear.cgColor
-        previewLayer?.videoGravity = .resizeAspectFill
+        previewLayer?.videoGravity = .resizeAspect
         previewLayer?.frame = view.bounds
         
         view.layer.insertSublayer(previewLayer!, at: 0)

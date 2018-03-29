@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Photos
 import FGHUD
+import CoreMedia
 
 public class FGVideoEditor: NSObject {
     open static let shared = FGVideoEditor.init()
