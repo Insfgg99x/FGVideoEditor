@@ -37,7 +37,7 @@
 
 微信样式视频裁剪只需要简单的使用(Simply use follow interface to crop a video in WeChat-style-lkie)
 ```siwft
-public convenience init(max duration:CGFloat, vedio url:URL, finishHandler:((FGVideoPreViewController, FGVideoInfo) -> ())?)
+public convenience init(maxDuration:CGFloat, vedio url:URL, finishHandler:((FGVideoPreViewController, FGVideoInfo) -> ())?)
 ```
 或者只裁剪不要UI(or just using crop function)
 ```swift 
