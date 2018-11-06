@@ -46,16 +46,16 @@ public func cropVideo(url: URL, cropRange:CMTimeRange, completion:((_ newUrl: UR
 或者只用微信样式的视频裁剪UI(or just WeChat-style video croping UI)
 ```swift
 public convenience init(frame: CGRect, url:URL, imgw:CGFloat, maxduration:CGFloat)
-var cropStart:CGFloat {get} //获取当前裁剪区域的左边界对应的时间（相对于视频开始播放的位置为0s）
-var cropDuration:CGFloat {get} //获取当前裁剪区域对应的时长
-var cropRange:CMTimeRange {get} //当前裁剪区域的CMTime范围
-var cropWidth:CGFloat {get} //当前裁剪区域的宽度
-var slidingBeginHandler:(() -> ())? {get, set} //开始滑动视频裁剪区域的左／右边界的回调
-var slidingHandler:((FGSlideDirection) -> ())? {get, set} //滑动视频裁剪区域的左／右边界的回调
-var slidingEndHandler:(() -> ())? {get, set} //结束左／右边界的滑动
-]var contentDidScrollHandler:(() -> ())? {get, set} //滑动视频帧图片横向列表的回调
-var dragWillBeginHandler:(() -> ())? {get, set} //将要滑动视频帧图片横向列表的回调
-var dragDidEndHandler:(() -> ())? {get, set} //结束滑动视频帧图片横向列表的回调
+var cropStart:CGFloat //获取当前裁剪区域的左边界对应的时间（相对于视频开始播放的位置为0s）
+var cropDuration:CGFloat //获取当前裁剪区域对应的时长
+var cropRange:CMTimeRange //当前裁剪区域的CMTime范围
+var cropWidth:CGFloat //当前裁剪区域的宽度
+var slidingBeginHandler:(() -> ())?  //开始滑动视频裁剪区域的左／右边界的回调
+var slidingHandler:((FGSlideDirection) -> ())?  //滑动视频裁剪区域的左／右边界的回调
+var slidingEndHandler:(() -> ())? //结束左／右边界的滑动
+var contentDidScrollHandler:(() -> ())? //滑动视频帧图片横向列表的回调
+var dragWillBeginHandler:(() -> ())?  //将要滑动视频帧图片横向列表的回调
+var dragDidEndHandler:(() -> ())?  //结束滑动视频帧图片横向列表的回调
 ```
 
 你可以使用`shouldSaveCropedVideoToPhotoLibrary`来控制裁剪视频后是否自动保存至相册，默认是true (save croped video to photo library. default is true, set false to disable auto save to photo library)
