@@ -170,10 +170,12 @@ slider.dragDidEndHandler = {
 # 安装 Installation
 
 ```swift
+pod repo update
 pod "FGVideoEditor", "~>1.2"
+
 import FGVideoEditor
 ```
-****若手动安装，请添加依赖：`"SnapKit"`, `"FGHUD", "~>2.4"`, `"pod "FGToolKit", "~>2.0"`****
+****若手动安装，请添加依赖：`"SnapKit"`, `"FGHUD"`, `"pod "FGToolKit"
 
 # 环境 Required
 
