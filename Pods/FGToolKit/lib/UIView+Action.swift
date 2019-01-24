@@ -11,7 +11,7 @@ private var UIViewTapActionHandlerKey = "UIViewTapActionHandlerKey"
 private var UIViewLongPressActionHandlerKey = "UIViewLongPressActionHandlerKey"
 
 public extension UIView {
-    func addTap(handler:((UITapGestureRecognizer) -> ())) {
+    func addTap(handler: @escaping ((UITapGestureRecognizer) -> ())) {
         isUserInteractionEnabled = true
         objc_setAssociatedObject(self, &UIViewTapActionHandlerKey, handler, .OBJC_ASSOCIATION_COPY)
         let tap =  UITapGestureRecognizer.init(target: self, action: #selector(fg_tapAction(_:)))
@@ -23,7 +23,7 @@ public extension UIView {
         }
         handler(sender)
     }
-    func addLongPress(handler:((UILongPressGestureRecognizer) -> ())) {
+    func addLongPress(handler: @escaping ((UILongPressGestureRecognizer) -> ())) {
         isUserInteractionEnabled = true
         objc_setAssociatedObject(self, &UIViewLongPressActionHandlerKey, handler, .OBJC_ASSOCIATION_COPY)
         let longPress =  UILongPressGestureRecognizer.init(target: self, action: #selector(fg_longPressAction(_:)))
