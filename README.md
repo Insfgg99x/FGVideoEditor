@@ -171,7 +171,7 @@ slider.dragDidEndHandler = {
 
 ```swift
 pod repo update
-pod "FGVideoEditor", "~>1.2"
+pod "FGVideoEditor", "~>1.2.1"
 
 import FGVideoEditor
 ```
