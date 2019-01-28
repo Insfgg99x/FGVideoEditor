@@ -10,7 +10,7 @@ import UIKit
 
 public class Maker: NSObject {
     //tbview
-    open class func makeTableView(style:UITableViewStyle?, delegate:UITableViewDelegate?, dataSource:UITableViewDataSource?, bgcolor:UIColor?) -> UITableView {
+    open class func makeTableView(style:UITableView.Style?, delegate:UITableViewDelegate?, dataSource:UITableViewDataSource?, bgcolor:UIColor?) -> UITableView {
         let tbView = UITableView.init(frame: .zero, style: style ?? .plain)
         if delegate != nil {
             tbView.delegate = delegate
@@ -25,6 +25,9 @@ public class Maker: NSObject {
         }
         if #available(iOS 9.0, *) {
             tbView.cellLayoutMarginsFollowReadableWidth = false
+        }
+        if #available(iOS 11.0, *) {
+            tbView.contentInsetAdjustmentBehavior = .never
         }
         return tbView
     }
@@ -76,7 +79,7 @@ public class Maker: NSObject {
                             textColor:UIColor?,
                             font:UIFont?,
                             bgcolor:UIColor?,
-                            envents:UIControlEvents,
+                            envents:UIControl.Event,
                             handler:((UIControl?) -> ())?) -> UIButton {
         let btn = UIButton.init(frame: .zero)
         if title != nil {
@@ -144,7 +147,7 @@ public class Maker: NSObject {
     }
     open class func makeBtn(img:String?,
                             bgcolor:UIColor?,
-                            envents:UIControlEvents,
+                            envents:UIControl.Event,
                             handler:((UIControl?) -> ())?) -> UIButton {
         let btn = UIButton.init(frame: .zero)
         if img != nil {
@@ -228,7 +231,7 @@ public class Maker: NSObject {
         return tf
     }
     
-    open class func makeAttributeText(prefix:(String,[NSAttributedStringKey: Any]?), suffix:(String,[NSAttributedStringKey: Any]?)) -> NSAttributedString {
+    open class func makeAttributeText(prefix:(String,[NSAttributedString.Key: Any]?), suffix:(String,[NSAttributedString.Key: Any]?)) -> NSAttributedString {
         let attributeText = NSMutableAttributedString.init()
         let p1 = NSAttributedString.init(string: prefix.0, attributes: prefix.1)
         attributeText.append(p1)
@@ -236,7 +239,7 @@ public class Maker: NSObject {
         attributeText.append(p2)
         return attributeText
     }
-    open class func makeAttributeText(prefix:(String,[NSAttributedStringKey: Any]?), mid:(String,[NSAttributedStringKey: Any]?), suffix:(String,[NSAttributedStringKey: Any]?)) -> NSAttributedString {
+    open class func makeAttributeText(prefix:(String,[NSAttributedString.Key: Any]?), mid:(String,[NSAttributedString.Key: Any]?), suffix:(String,[NSAttributedString.Key: Any]?)) -> NSAttributedString {
         let attributeText = NSMutableAttributedString.init()
         let p1 = NSAttributedString.init(string: prefix.0, attributes: prefix.1)
         attributeText.append(p1)

@@ -7,5 +7,5 @@ target 'FGVideoEditor' do
   # Pods for FGVideoEditor
   pod "SnapKit"
   pod "FGHUD" , "~>2.4"
-  pod "FGToolKit" , "~>2.0"
+  pod "FGToolKit" , "~>2.1.1"
 end
