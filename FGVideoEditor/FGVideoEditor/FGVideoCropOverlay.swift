@@ -219,3 +219,16 @@ extension FGVideoCropOverlay {
         }
     }
 }
+
+//MARK: - 滑动事件过滤
+extension FGVideoCropOverlay {
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        let right = Int(bounds.size.width)
+        let range = 15
+        let x = Int(point.x)
+        if (0...range).contains(x) || ((right - range)...right).contains(x) {
+            return super.hitTest(point, with: event)
+        }
+        return nil
+    }
+}
