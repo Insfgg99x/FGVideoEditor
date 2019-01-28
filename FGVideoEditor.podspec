@@ -12,6 +12,6 @@ s.source_files = 'FGVideoEditor/FGVideoEditor/*.swift'
 s.requires_arc = true
 s.dependency     'SnapKit'
 s.dependency	 'FGHUD', '2.4'
-s.dependency     'FGToolKit'
+s.dependency     'FGToolKit', '2.1.1'
 end
 
